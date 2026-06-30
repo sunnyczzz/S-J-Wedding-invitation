@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Wedding Invitation</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@200;300;400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared/styles.css"/>
+</head>
+<body>
+<div id="main-content">
+
+<!-- ═══════════════════════════════════
+     HERO
+═══════════════════════════════════ -->
+<div class="invitation">
+
+  <!-- Top-left floral cluster -->
+  <img class="floral-corner tl" src="images/invitation/top-left-flower.svg" alt="">
+
+  <!-- Top-right floral cluster -->
+  <img class="floral-corner tr" src="images/invitation/top-right-flower.svg" alt="">
+
+  <!-- Bottom-left floral cluster -->
+  <img class="floral-corner bl" src="images/invitation/bottom-left-flower.svg" alt="">
+
+  <!-- Bottom-right floral cluster -->
+  <img class="floral-corner br" src="images/invitation/bottom-right-flower.svg" alt="">
+
+  <div class="invitation-names-wrap">
+    <h1 class="invitation-names">
+      <span class="word"><span class="word-inner" style="animation-delay:0.5s">Ya-Hsin Cheng</span></span>
+    </h1>
+    <div class="invitation-line">
+      <div class="invitation-line-bar"></div>
+      <span class="invitation-amp">and</span>
+      <div class="invitation-line-bar"></div>
+    </div>
+    <h1 class="invitation-names">
+      <span class="word"><span class="word-inner" style="animation-delay:0.9s">Jordan Hawkins</span></span>
+    </h1>
+
+    <p class="invitation-tagline">Joyfully invite you to<br>their wedding celebration</p>
+
+    <div class="invitation-date-row">
+      <div class="invitation-date-side">
+        <div class="invitation-date-line"></div>
+        <span class="invitation-date-word">Sunday</span>
+        <div class="invitation-date-line"></div>
+      </div>
+      <span class="invitation-date-num">09</span>
+      <div class="invitation-date-side">
+        <div class="invitation-date-line"></div>
+        <span class="invitation-date-word">August</span>
+        <div class="invitation-date-line"></div>
+      </div>
+    </div>
+    <p class="invitation-year">2026</p>
+
+    <p class="invitation-time">Six o'clock in the evening</p>
+
+    <p class="invitation-venue">Modern Eats<br>414 Broadway<br>Millbrae, CA 94030</p>
+
+  </div>
+
+  <div class="scroll-hint" onclick="document.getElementById('countdown').scrollIntoView({behavior:'smooth'})">
+    <div class="scroll-tick"></div>
+    <span>scroll</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     COUNTDOWN
+═══════════════════════════════════ -->
+<div class="countdown-section" id="countdown">
+  <p class="countdown-label">Counting down to the party</p>
+  <div class="countdown-grid">
+    <div class="countdown-unit"><span class="countdown-number" id="party-cd-days">--</span><span class="countdown-unit-label">Days</span></div>
+    <span class="countdown-sep">·</span>
+    <div class="countdown-unit"><span class="countdown-number" id="party-cd-hours">--</span><span class="countdown-unit-label">Hours</span></div>
+    <span class="countdown-sep">·</span>
+    <div class="countdown-unit"><span class="countdown-number" id="party-cd-mins">--</span><span class="countdown-unit-label">Minutes</span></div>
+    <span class="countdown-sep">·</span>
+    <div class="countdown-unit"><span class="countdown-number" id="party-cd-secs">--</span><span class="countdown-unit-label">Seconds</span></div>
+  </div>
+  <p class="countdown-event-date">6:00 pm · August 9, 2026</p>
+  <p class="countdown-event-name">Dinner Party · Modern Eats, Millbrae</p>
+</div>
+
+<!-- ═══════════════════════════════════
+     CALENDAR
+═══════════════════════════════════ -->
+<div class="divider" id="dcal"><div class="divider-line"></div><span class="divider-mark">✦</span><div class="divider-line"></div></div>
+
+<section id="calendar">
+  <p class="section-tag">Mark Your Calendar</p>
+  <h2 class="section-heading">August 2026</h2>
+  <p class="section-body">Circle the date — we can't wait to celebrate with you.</p>
+  <div class="cal-wrap">
+    <div class="cal-weekdays">
+      <span>SUN</span><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span>
+    </div>
+    <div class="cal-grid">
+      <span class="cal-blank"></span><span class="cal-blank"></span><span class="cal-blank"></span><span class="cal-blank"></span><span class="cal-blank"></span><span class="cal-blank"></span><span>1</span>
+      <span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span>
+      <span class="cal-day-circled">9<svg class="cal-circle-svg" viewBox="0 0 60 60"><ellipse cx="30" cy="30" rx="26" ry="22" fill="none" stroke="#c1684a" stroke-width="2.5" transform="rotate(-8 30 30)"/></svg></span>
+      <span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span>
+      <span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span>
+      <span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span>
+      <span>30</span><span>31</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div><span class="divider-mark">✦</span><div class="divider-line"></div></div>
+
+<!-- ═══════════════════════════════════
+     TOAST
+═══════════════════════════════════ -->
+<div class="toast-section" id="toast">
+  <img class="toast-doodle" src="images/toast.svg" width="200" style="background-color:transparent;" />
+  <p class="toast-text">Here's to love, laughter,<br>and happily ever after</p>
+  <p class="toast-sub">We can't wait to celebrate with you</p>
+</div>
+
+<div class="divider"><div class="divider-line"></div><span class="divider-mark">✦</span><div class="divider-line"></div></div>
+
+<!-- ═══════════════════════════════════
+     EVENTS
+═══════════════════════════════════ -->
+<section id="events">
+  <p class="section-tag">The Celebration</p>
+  <h2 class="section-heading">Join us for an<br>evening of celebration</h2>
+  <p class="section-body">We are so glad to share this special moment with the people closest to our hearts. Below you'll find all the details for the celebration.</p>
+  <div class="cards">
+    <div class="card" id="c2">
+      <p class="card-label">The Celebration &nbsp;·&nbsp; 09 August 2026</p>
+      <h3 class="card-title">Dinner Party</h3>
+      <div class="card-detail"><img class="card-detail-icon" src="images/icons/location-icon.svg" width="14" height="14" /><p class="card-detail-text"><b>Modern Eats</b><br>414 Broadway, Millbrae, CA 94030</p></div>
+      <div class="card-detail"><img class="card-detail-icon" src="images/icons/date-icon.svg" width="14" height="14" /><p class="card-detail-text"><b>Sunday, August 9, 2026</b> &nbsp;·&nbsp; 6:00 PM PDT</p></div>
+      <div class="card-detail"><img class="card-detail-icon" src="images/icons/note-icon.svg" width="14" height="14" /><p class="card-detail-text">An intimate dinner with those we love</p></div>
+      <span class="card-badge">Family &amp; Close Friends</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     NOTE
+═══════════════════════════════════ -->
+<section class="note-section" id="note">
+  <p class="section-tag">A note from us</p>
+  <p class="section-body">Your presence is the greatest gift we could ask for. These gatherings are intentionally small — a quiet celebration with the people who mean everything to us.<br><br>We will be in touch with any updates. In the meantime, please don't hesitate to reach out with any questions.</p>
+</section>
+
+<div class="divider" id="d3"><div class="divider-line"></div><span class="divider-mark">✦</span><div class="divider-line"></div></div>
+
+<!-- ═══════════════════════════════════
+     RSVP
+═══════════════════════════════════ -->
+<section class="rsvp-section" id="rsvp">
+  <p class="section-tag">RSVP</p>
+  <h2 class="section-heading">Will you be joining us?</h2>
+  <p class="section-body">Kindly let us know by <strong style="font-weight:400;color:var(--text)">July 15, 2026</strong>. Your reply goes straight to us.</p>
+  <div class="rsvp-form" id="rsvp-form">
+    <div class="rsvp-row">
+      <div class="rsvp-field"><label class="rsvp-label" for="rsvp-name">Your Name</label><input class="rsvp-input" id="rsvp-name" type="text" placeholder="Full name" required/></div>
+    </div>
+    <div class="rsvp-row">
+      <div class="rsvp-field">
+        <label class="rsvp-label" for="rsvp-attending">Attending</label>
+        <select class="rsvp-select" id="rsvp-attending">
+          <option value="">— Please select —</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+      <div class="rsvp-field">
+        <label class="rsvp-label" for="rsvp-guests">Number of Guests</label>
+        <select class="rsvp-select" id="rsvp-guests">
+          <option value="1">1 — Just me</option>
+          <option value="2">2 — Myself + 1</option>
+        </select>
+      </div>
+    </div>
+    <div class="rsvp-field"><label class="rsvp-label" for="rsvp-message">Message <span style="opacity:0.5;font-size:0.85em">(optional)</span></label><textarea class="rsvp-textarea" id="rsvp-message" placeholder="Share a warm wish…"></textarea></div>
+    <button class="rsvp-btn" id="rsvp-btn" onclick="submitRSVP()">Send RSVP</button>
+  </div>
+  <div class="rsvp-success" id="rsvp-success">
+    <div class="rsvp-success-icon">♡</div>
+    <p class="rsvp-success-title">Thank you so much!</p>
+    <p class="rsvp-success-body">Your RSVP has been received.<br>We cannot wait to celebrate with you.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     FOOTER
+═══════════════════════════════════ -->
+<footer id="footer">
+  
+  <img src="images/footer-table.png" style="background-color:transparent;" />
+  <p class="footer-text">With love &nbsp;·&nbsp;  2026 &nbsp;·&nbsp; San Francisco</p>
+</footer>
+
+</div>
+
+<script src="shared/scripts.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+  partyCountdown();
+  initScrollReveal();
+});
+
+function submitRSVP() {
+  const name    = document.getElementById('rsvp-name').value.trim();
+  const attend  = document.getElementById('rsvp-attending').value;
+  const guests  = document.getElementById('rsvp-guests').value;
+  const dietary = document.getElementById('rsvp-dietary').value.trim();
+  const message = document.getElementById('rsvp-message').value.trim();
+  if (!name)   { alert('Please enter your name.'); return; }
+  if (!attend) { alert('Please select attendance.'); return; }
+  const btn = document.getElementById('rsvp-btn');
+  btn.disabled = true; btn.textContent = 'Sending…';
+  const labels = { 'yes': 'Joyfully accepting', 'no': 'Regretfully declining' };
+  const subject = encodeURIComponent('RSVP: ' + name);
+  const body    = encodeURIComponent('Name: ' + name + '\nAttending: ' + labels[attend] + '\nGuests: ' + guests + '\nDietary: ' + (dietary || 'none') + (message ? '\n\nMessage:\n' + message : ''));
+  window.location.href = 'mailto:shoppingsunnyonly@gmail.com?subject=' + subject + '&body=' + body;
+  setTimeout(() => {
+    document.getElementById('rsvp-form').style.display = 'none';
+    document.getElementById('rsvp-success').classList.add('show');
+  }, 800);
+}
+</script>
+</body>
+</html>
