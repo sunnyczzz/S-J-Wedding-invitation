@@ -198,43 +198,6 @@
 
 <div class="divider" id="d3"><div class="divider-line"></div><span class="divider-mark">✦</span><div class="divider-line"></div></div>
 
-<!-- ═══════════════════════════════════
-     RSVP
-═══════════════════════════════════ -->
-<section class="rsvp-section" id="rsvp">
-  <p class="section-tag">RSVP</p>
-  <h2 class="section-heading">Will you be joining us?</h2>
-  <p class="section-body">Kindly let us know by <strong style="font-weight:400;color:var(--text)">July 15, 2026</strong>. Your reply goes straight to us.</p>
-  <div class="rsvp-form" id="rsvp-form">
-    <div class="rsvp-row">
-      <div class="rsvp-field"><label class="rsvp-label" for="rsvp-name">Your Name</label><input class="rsvp-input" id="rsvp-name" type="text" placeholder="Full name" required/></div>
-    </div>
-    <div class="rsvp-row">
-      <div class="rsvp-field">
-        <label class="rsvp-label" for="rsvp-attending">Attending</label>
-        <select class="rsvp-select" id="rsvp-attending">
-          <option value="">— Please select —</option>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-        </select>
-      </div>
-      <div class="rsvp-field">
-        <label class="rsvp-label" for="rsvp-guests">Number of Guests</label>
-        <select class="rsvp-select" id="rsvp-guests">
-          <option value="1">1 — Just me</option>
-          <option value="2">2 — Myself + 1</option>
-        </select>
-      </div>
-    </div>
-    <div class="rsvp-field"><label class="rsvp-label" for="rsvp-message">Message <span style="opacity:0.5;font-size:0.85em">(optional)</span></label><textarea class="rsvp-textarea" id="rsvp-message" placeholder="Share a warm wish…"></textarea></div>
-    <button class="rsvp-btn" id="rsvp-btn" onclick="submitRSVP()">Send RSVP</button>
-  </div>
-  <div class="rsvp-success" id="rsvp-success">
-    <div class="rsvp-success-icon">♡</div>
-    <p class="rsvp-success-title">Thank you so much!</p>
-    <p class="rsvp-success-body">Your RSVP has been received.<br>We cannot wait to celebrate with you.</p>
-  </div>
-</section>
 
 <!-- ═══════════════════════════════════
      FOOTER
@@ -254,25 +217,6 @@ window.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
 });
 
-function submitRSVP() {
-  const name    = document.getElementById('rsvp-name').value.trim();
-  const attend  = document.getElementById('rsvp-attending').value;
-  const guests  = document.getElementById('rsvp-guests').value;
-  const dietary = document.getElementById('rsvp-dietary').value.trim();
-  const message = document.getElementById('rsvp-message').value.trim();
-  if (!name)   { alert('Please enter your name.'); return; }
-  if (!attend) { alert('Please select attendance.'); return; }
-  const btn = document.getElementById('rsvp-btn');
-  btn.disabled = true; btn.textContent = 'Sending…';
-  const labels = { 'yes-both': 'Yes — both events', 'yes-ceremony': 'Ceremony only (June 8)', 'yes-dinner': 'Dinner only (Aug 9)', 'no': 'Regretfully declining' };
-  const subject = encodeURIComponent('RSVP: ' + name);
-  const body    = encodeURIComponent('Name: ' + name + '\nAttending: ' + labels[attend] + '\nGuests: ' + guests + '\nDietary: ' + (dietary || 'none') + (message ? '\n\nMessage:\n' + message : ''));
-  window.location.href = 'mailto:shoppingsunnyonly@gmail.com?subject=' + subject + '&body=' + body;
-  setTimeout(() => {
-    document.getElementById('rsvp-form').style.display = 'none';
-    document.getElementById('rsvp-success').classList.add('show');
-  }, 800);
-}
 </script>
 </body>
 </html>
