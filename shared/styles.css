@@ -33,8 +33,24 @@ body {
 /* ════════════════════════════════════
    INVITATION HERO — floral invitation style
 ════════════════════════════════════ */
+.invitation-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  pointer-events: none;
+}
+.invitation-bg-portrait  { display: block; }
+.invitation-bg-landscape { display: none; }
+@media (orientation: landscape) {
+  .invitation-bg-portrait  { display: none; }
+  .invitation-bg-landscape { display: block; }
+}
+
 .invitation {
-  background: #ffffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
