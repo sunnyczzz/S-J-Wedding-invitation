@@ -1,6 +1,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
+  color-scheme: light;
   --linen:      #faf6ee;
   --linen-deep: #f0e8d8;
   --sage:       #9aab8e;
@@ -43,7 +44,7 @@ body {
   z-index: 0;
   pointer-events: none;
 }
-.invitation-bg-portrait  { display: block; }
+.invitation-bg-portrait  { display: block; object-position: top center; }
 .invitation-bg-landscape { display: none; }
 @media (orientation: landscape) {
   .invitation-bg-portrait  { display: none; }
